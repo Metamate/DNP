@@ -8,15 +8,22 @@
     "start": "next start"
   },
   "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^1.2.30",
+    "@fortawesome/free-solid-svg-icons": "^5.14.0",
+    "@fortawesome/react-fontawesome": "^0.1.11",
     "@mdx-js/loader": "^1.6.16",
     "@next/mdx": "^9.5.2",
     "next": "9.5.2",
+    "prism-react-renderer": "^1.1.1",
+    "prismjs": "^1.21.0",
     "react": "16.13.1",
     "react-dom": "16.13.1",
     "react-transition-group": "^4.4.1"
   },
   "devDependencies": {
+    "@tailwindcss/ui": "^0.5.0",
     "postcss-flexbugs-fixes": "^4.2.1",
+    "postcss-nesting": "^7.0.1",
     "postcss-preset-env": "^6.7.0",
     "stylelint": "^13.6.1",
     "stylelint-config-standard": "^20.0.0",
