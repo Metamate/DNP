@@ -1,16 +1,18 @@
 import '../styles/index.css'
 import { MDXProvider } from '@mdx-js/react'
 import Layout from '../components/layout'
-import CodeBlock from '../components/CodeBlock'
+import CodeBlock from '../components/codeblock'
+import Link from 'next/link'
 
 const components = {
   wrapper: props => (
     <Layout {...props} />
   ),
-  code: CodeBlock
+  code: CodeBlock,
+  Link: props => (
+    <Link {...props} passHref />
+  )
 }
-
-//TODO FIX THOSE LINKS ind MDX
 
 function MyApp({ Component, pageProps }) {
   return <MDXProvider components={components}>
