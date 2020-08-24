@@ -1,29 +1,13 @@
-import Highlight, { defaultProps } from 'prism-react-renderer'
-import theme from 'prism-react-renderer/themes/vsDark';
-import Prism from 'prism-react-renderer/prism';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faCheck } from '@fortawesome/free-solid-svg-icons'
 
-(typeof global !== "undefined" ? global : window).Prism = Prism;
-
-require("prismjs/components/prism-csharp");
-
-export default function CodeBlock({ children, className }) {
-  const language = className.replace(/language-/, '')
+export default function CheckList({ items }) {
   return (
-    <Highlight {...defaultProps} code={children} language={language} theme={theme}>
-      {({ className, style, tokens, getLineProps, getTokenProps }) => (
-        <pre className={className} style={{ ...style, textAlign: 'left', margin: '1em 0', padding: '0.5em', overflowX: 'auto' }}>
-          {tokens.map((line, i) => (
-            <div key={i} {...getLineProps({ line, key: i })}>
-              <span style={{ display: 'table-cell', textAlign: 'right', paddingRight: '1em', userSelect: 'none', opacity: '0.5' }}>{i + 1}</span>
-              <span style={{ display: 'table-cell' }}>
-                {line.map((token, key) => (
-                  <span key={key} {...getTokenProps({ token, key })} />
-                ))}
-              </span>
-            </div>
-          ))}
-        </pre>
+    /* Have to hardcode style due to specificity issue with tailwind. TODO: Fix*/
+    <ul style={{ paddingLeft: '1rem' }}>
+      {items.map((child) =>
+        <li key={child.toString()} className="list-none"><FontAwesomeIcon className="w-4 inline mr-2 text-green-500" icon={faCheck} />{child}</li>
       )}
-    </Highlight>
+    </ul>
   )
 }
