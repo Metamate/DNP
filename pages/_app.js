@@ -7,7 +7,6 @@ const components = {
   wrapper: props => (
     <Layout {...props} />
   ),
-  pre: props => <div {...props} />,
   code: CodeBlock
 }
 

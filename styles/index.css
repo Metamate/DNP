@@ -35,14 +35,6 @@
     @apply text-lg font-bold text-black mt-8 -mb-2;
   }
 
-  & code {
-    @apply font-mono text-sm inline bg-gray-400 px-1;
-  }
-
-  & pre code {
-    @apply block bg-gray-600 p-4 rounded;
-  }
-
   & blockquote {
     @apply border-l-4 border-gray-300 pl-4 italic;
   }
@@ -55,6 +47,10 @@
       @apply pl-10;
     }
   }
+}
+
+.token-line {
+  @apply .table-row;
 }
 
 /* Start purging... */

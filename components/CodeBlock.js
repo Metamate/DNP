@@ -7,17 +7,20 @@ import Prism from 'prism-react-renderer/prism';
 
 require("prismjs/components/prism-csharp");
 
-export default ({ children, className }) => {
+const CodeBlock = ({ children, className }) => {
   const language = className.replace(/language-/, '')
   return (
     <Highlight {...defaultProps} code={children} language={language} theme={theme}>
       {({ className, style, tokens, getLineProps, getTokenProps }) => (
-        <pre className={className} style={{ ...style, padding: '20px' }}>
+        <pre className={className} style={{ ...style, textAlign: 'left', margin: '1em 0', padding: '0.5em', overflow: 'scroll' }}>
           {tokens.map((line, i) => (
             <div key={i} {...getLineProps({ line, key: i })}>
-              {line.map((token, key) => (
-                <span key={key} {...getTokenProps({ token, key })} />
-              ))}
+              <span style={{ display: 'table-cell', textAlign: 'right', paddingRight: '1em', userSelect: 'none', opacity: '0.5' }}>{i + 1}</span>
+              <span style={{ display: 'table-cell' }}>
+                {line.map((token, key) => (
+                  <span key={key} {...getTokenProps({ token, key })} />
+                ))}
+              </span>
             </div>
           ))}
         </pre>
@@ -25,3 +28,5 @@ export default ({ children, className }) => {
     </Highlight>
   )
 }
+
+export default CodeBlock;
