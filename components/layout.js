@@ -2,7 +2,7 @@ import Head from 'next/head'
 import { useState } from 'react'
 import Link from 'next/link'
 
-export default function Home({ children }) {
+export default function Layout({ children }) {
   const [isOn, setIsOn] = useState(false)
   return (
     <>
