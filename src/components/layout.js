@@ -1,9 +1,9 @@
-import Meta from './meta'
-import { useState } from 'react'
-import NavBar from '@/components/nav-bar'
+import Meta from "./meta";
+import { useState } from "react";
+import NavBar from "@/components/nav-bar";
 
 export default function Layout({ children }) {
-  const [isOpen, setIsOpen] = useState(false)
+  const [isOpen, setIsOpen] = useState(false);
   return (
     <>
       <Meta />
@@ -16,5 +16,5 @@ export default function Layout({ children }) {
         </main>
       </div>
     </>
-  )
+  );
 }

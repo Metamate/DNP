@@ -1,1 +1,1 @@
-export const APP_NAME = 'DNP'
+export const APP_NAME = "DNP";
