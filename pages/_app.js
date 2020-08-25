@@ -1,7 +1,7 @@
 import '../styles/index.css'
 import { MDXProvider } from '@mdx-js/react'
-import Layout from '../components/Layout'
-import CodeBlock from '../components/CodeBlock'
+import Layout from '../components/layout'
+import CodeBlock from '../components/code-block'
 import Link from 'next/link'
 
 const components = {
