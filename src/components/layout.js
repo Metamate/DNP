@@ -1,6 +1,6 @@
 import Meta from './meta'
 import { useState } from 'react'
-import NavBar from './nav-bar'
+import NavBar from '@/components/nav-bar'
 
 export default function Layout({ children }) {
   const [isOpen, setIsOpen] = useState(false)

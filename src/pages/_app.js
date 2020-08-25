@@ -1,10 +1,10 @@
-import '../styles/index.css'
+import '@/styles/index.css'
 import { MDXProvider } from '@mdx-js/react'
-import Layout from '../components/layout'
-import CodeBlock from '../components/code-block'
+import Layout from '@/components/layout'
+import CodeBlock from '@/components/code-block'
 import Link from 'next/link'
 import Head from 'next/head'
-import { APP_NAME } from '../lib/constants'
+import { APP_NAME } from '@/lib/constants'
 
 const components = {
   wrapper: props => (
