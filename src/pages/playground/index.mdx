@@ -10,11 +10,7 @@ Intro. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod t
   items={["To Ride a bike", "To ride two bikes", "To bake a nice cake"]}
 />
 
-<iframe
-  src="https://www.youtube-nocookie.com/embed/4adVM33GAlA"
-  frameBorder="0"
-  allowFullScreen
-></iframe>
+<iframe src="https://www.youtube-nocookie.com/embed/4adVM33GAlA" />
 
 ##### C\#
 
@@ -36,7 +32,7 @@ namespace HelloWorld
 
 ##### HTML
 
-```html
+```csharp
 @page "/counter"
 
 <h1>Counter</h1>
@@ -45,8 +41,13 @@ namespace HelloWorld
 
 <button class="btn btn-primary" @onclick="IncrementCount">Click me</button>
 
-@code { private int currentCount = 0; private void IncrementCount() {
-currentCount++; } }
+@code {
+  private int currentCount = 0;
+
+  private void IncrementCount() {
+    currentCount++;
+  }
+}
 ```
 
 ### Checked lists

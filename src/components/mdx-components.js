@@ -35,8 +35,10 @@ const components = {
           height: "100%",
           width: "100%",
         }}
+        frameBorder="0"
+        allowFullScreen
         {...props}
-      />
+      ></iframe>
     </div>
   ),
 };
