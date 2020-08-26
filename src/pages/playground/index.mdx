@@ -1,11 +1,20 @@
-import CheckList from '@/components/check-list'
+import CheckList from "@/components/check-list";
+
+<Title title="Playground" />
 
 Intro. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 
 ### What you will learn
-<CheckList items={['To Ride a bike', 'To ride two bikes', 'To bake a nice cake']} />
 
-<iframe src="https://www.youtube-nocookie.com/embed/4adVM33GAlA" frameBorder="0" allowFullScreen></iframe>
+<CheckList
+  items={["To Ride a bike", "To ride two bikes", "To bake a nice cake"]}
+/>
+
+<iframe
+  src="https://www.youtube-nocookie.com/embed/4adVM33GAlA"
+  frameBorder="0"
+  allowFullScreen
+></iframe>
 
 ##### C\#
 
@@ -24,6 +33,7 @@ namespace HelloWorld
     }
 }
 ```
+
 ##### HTML
 
 ```html
@@ -35,14 +45,8 @@ namespace HelloWorld
 
 <button class="btn btn-primary" @onclick="IncrementCount">Click me</button>
 
-@code {
-    private int currentCount = 0;
-
-    private void IncrementCount()
-    {
-        currentCount++;
-    }
-}
+@code { private int currentCount = 0; private void IncrementCount() {
+currentCount++; } }
 ```
 
 ### Checked lists
