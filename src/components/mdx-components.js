@@ -8,14 +8,14 @@ const components = {
   wrapper: (props) => <Layout {...props} />,
   code: CodeBlock,
   Link: (props) => <Link {...props} passHref />,
-  Title: ({ title }) => (
+  Title: ({ children }) => (
     <>
       <Head>
         <title>
-          {title} | {APP_NAME}
+          {children} | {APP_NAME}
         </title>
       </Head>
-      <h2>{title}</h2>
+      <h1>{children}</h1>
     </>
   ),
   iframe: (props) => (

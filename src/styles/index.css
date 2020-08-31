@@ -27,6 +27,10 @@
     @apply font-bold;
   }
 
+  & h1 {
+    @apply text-2xl font-bold text-black mb-2 mt-5;
+  }
+
   & h2 {
     @apply text-xl font-bold text-black mb-2 mt-5;
   }
@@ -39,6 +43,11 @@
     @apply border-l-4 border-gray-300 pl-4 italic;
   }
 
+  & code {
+    padding: 0.13rem 0.26rem;
+    @apply bg-gray-100;
+  }
+
   & ul,
   & ol {
     @apply pl-5 list-disc;
@@ -47,8 +56,13 @@
       @apply pl-10;
     }
   }
+
+  & li {
+    @apply py-1;
+  }
 }
 
+/* Class added by Prism */
 .token-line {
   @apply .table-row;
 }
